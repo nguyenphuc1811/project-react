@@ -1,0 +1,28 @@
+{
+  "studentList": [
+    {
+      "name": "Phạm Xuân Diệu",
+      "age": "25",
+      "gender": false,
+      "id": 6
+    },
+    {
+      "name": "mamaaaa",
+      "age": "55",
+      "gender": "true",
+      "id": 7
+    },
+    {
+      "name": "mamaaaa",
+      "age": "55",
+      "gender": "true",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "name": "sy abc",
+      "age": "26",
+      "gender": "true"
+    }
+  ]
+}
