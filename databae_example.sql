@@ -34,9 +34,6 @@ foreign key(masv) references SinhVien(masv),
 foreign key(magv) references GiangVien(magv),
 foreign key(madt) references DeTai(madt)
 );
-select dt.tendt,dt.madt from detai dt left join HuongDan hd on dt.madt = hd.madt group by hd.madt having count(hd.masv) > 2;
-select madt,tendt from detai where kinhphi = (select max(kinhphi) from detai);
-select k.tenkhoa,count(sv.masv) as slsv from khoa k left join sinhvien sv on k.makhoa = sv.makhoa group by k.makhoa;
 INSERT INTO Khoa VALUES
 ("Geo","Dia ly va QLTN",3855413),
 ("Math","Toan",3855411),
@@ -69,3 +66,6 @@ INSERT INTO HuongDan VALUES
 (6,"Dt01",13,Null),
 (7,"Dt04",11,10),
 (8,"Dt03",15,6);
+select dt.tendt,dt.madt from detai dt left join HuongDan hd on dt.madt = hd.madt group by hd.madt having count(hd.masv) > 2;
+select madt,tendt from detai where kinhphi = (select max(kinhphi) from detai);
+select k.tenkhoa,count(sv.masv) as slsv from khoa k left join sinhvien sv on k.makhoa = sv.makhoa group by k.makhoa;
