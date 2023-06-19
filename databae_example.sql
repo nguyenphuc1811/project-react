@@ -66,6 +66,9 @@ INSERT INTO HuongDan VALUES
 (6,"Dt01",13,Null),
 (7,"Dt04",11,10),
 (8,"Dt03",15,6);
+-- Sử dụng lệnh truy vấn SQL lấy ra mã số và tên các đề tài có nhiều hơn 2 sinh viên tham gia thực tập  
 select dt.tendt,dt.madt from detai dt left join HuongDan hd on dt.madt = hd.madt group by hd.madt having count(hd.masv) > 2;
+-- Sử dụng câu lệnh truy vấn SQL lấy ra mã số, tên đề tài của đề tài có kinh phí cao nhất 
 select madt,tendt from detai where kinhphi = (select max(kinhphi) from detai);
+-- Sử dụng câu lệnh SQL xuất ra Tên khoa, Số lượng sinh viên của mỗi khoa .
 select k.tenkhoa,count(sv.masv) as slsv from khoa k left join sinhvien sv on k.makhoa = sv.makhoa group by k.makhoa;
