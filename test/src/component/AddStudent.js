@@ -21,7 +21,7 @@ const addStudent = async (student) => {
         title: 'Thêm mới thành công',
         showConfirmButton: false,
         timer: 1500,
-    }, confirmStudent(student))
+    } , confirmStudent(student))
 }
 
 const AddStudent = () => {
@@ -37,6 +37,7 @@ const AddStudent = () => {
                 }}
                 validationSchema={studentValidate}
                 onSubmit={value => {
+                    value.gender = JSON.parse(value.gender);
                     addStudent(value);
                 }}
             >

@@ -47,10 +47,11 @@ const EditStudent = () => {
                     id: student.id,
                     name: student.name,
                     age: student.age,
-                    gender: student.gender
+                    gender: JSON.stringify(student.gender)
                 }}
                 validationSchema={studentValidate}
                 onSubmit={value => {
+                    value.gender = JSON.parse(value.gender);
                     addStudent(value);
                 }}
             >
@@ -72,7 +73,7 @@ const EditStudent = () => {
                         <span>Nam: </span>
                         <Field type="radio" name="gender" value="true" />
                         <span>Nữ: </span>
-                        <Field type="radio" name="gender" value="false" checked />
+                        <Field type="radio" name="gender" value="false"/>
                         <button className="btn btn-primary" type="submit" disabled={Object.keys(errors).length > 0 && Object.keys(touched).length > 0}>Chỉnh sửa</button>
                     </Form>
                 )}

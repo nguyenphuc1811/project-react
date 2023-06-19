@@ -9,20 +9,21 @@
     {
       "name": "mamaaaa",
       "age": "55",
-      "gender": "true",
+      "gender": true,
       "id": 7
     },
     {
       "name": "mamaaaa",
       "age": "55",
-      "gender": "true",
+      "gender": true,
       "id": 8
     },
     {
+      
       "id": 9,
       "name": "sy abc",
       "age": "26",
-      "gender": "true"
+      "gender": true
     }
   ]
 }
